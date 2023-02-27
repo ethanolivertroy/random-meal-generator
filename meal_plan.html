@@ -1,0 +1,26 @@
+<!-- meal_plan.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Meal Plan Generator</title>
+  </head>
+  <body>
+    <h1>Random Meal Plan Generator</h1>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Breakfast</th>
+        <th>Lunch</th>
+        <th>Dinner</th>
+      </tr>
+      {% for i in range(7) %}
+      <tr>
+        <td>Day {{ i+1 }}</td>
+        {% for meal, dish in meal_plans[i].items() %}
+        <td>{{ dish }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
